@@ -12,33 +12,40 @@ export class ImageLoader extends React.Component<IImageLoaderProps> {
     };
   }
 
-  updateState() {
+  updateState(currentStatus: string) {
     this.setState({
-      status: [...this.state.status]
+      status: [...this.state.status, currentStatus]
     });
   }
 
+  onImageLoadStart() {
+    this.updateState("Image loading started!");
+  }
+
   onImageLoaded() {
-    this.state.status.push("Image loaded successfully!");
-    this.updateState();
+    this.updateState("Image loaded successfully!");
   }
 
   onLoadingError() {
-    this.state.status.push("Image loaded successfully!");
-    this.updateState();
+    this.updateState("Image loaded successfully!");
   }
 
+  /**
+   * @description
+   * - will be triggered when the state has updated
+   */
   componentDidUpdate() {
     // each time when the stage get updated
     console.log(this.state);
   }
 
+  /**
+   * @description
+   * - will be triggered only one time
+   * - when the components gets loaded/mounted in the page
+   */
   componentDidMount() {
-    this.state.status.push("Component Mounted!");
-    this.updateState();
-
-    this.state.status.push("Image started loading...");
-    this.updateState();
+    this.updateState("Component Mounted!");
   }
 
   render() {
@@ -48,6 +55,7 @@ export class ImageLoader extends React.Component<IImageLoaderProps> {
           width="100px"
           src={this.props.url}
           alt="dynamic"
+          onLoadStart={() => this.onImageLoadStart()}
           onLoad={() => this.onImageLoaded()}
           onError={() => this.onLoadingError()}
         />
