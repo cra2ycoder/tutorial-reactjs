@@ -2,7 +2,8 @@ import {
   Component,
   PureComponent,
   Car,
-  TypescriptCar
+  TypescriptCar,
+  Counter
 } from "../code/components/class";
 
 import "./styles.css";
@@ -16,7 +17,7 @@ export default function App() {
       <Component />
       <PureComponent />
       <hr />
-      <h3>Components: PropTypes</h3>
+      <h3>Class Components: PropTypes/Typings</h3>
       <Car
         name="bmw"
         model="x1"
@@ -29,6 +30,9 @@ export default function App() {
         model="x1"
         isFourWheelDriving={true}
       />
+      <hr />
+      <h3>Class Components: State</h3>
+      <Counter />
     </div>
   );
 }
