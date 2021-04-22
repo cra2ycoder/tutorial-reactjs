@@ -13,8 +13,14 @@ export class ImageLoader extends React.Component<IImageLoaderProps> {
   }
 
   updateState(currentStatus: string) {
-    this.setState({
-      status: [...this.state.status, currentStatus]
+    // method one
+    // this.setState({
+    //   status: [...this.state.status, currentStatus]
+    // });
+
+    // method two
+    this.setState((state, props) => {
+      return state.status.push(currentStatus);
     });
   }
 
