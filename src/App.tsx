@@ -3,7 +3,8 @@ import {
   PureComponent,
   Car,
   TypescriptCar,
-  Counter
+  Counter,
+  ImageLoader
 } from "../code/components/class";
 
 import "./styles.css";
@@ -32,7 +33,10 @@ export default function App() {
       />
       <hr />
       <h3>Class Components: State</h3>
-      <Counter />
+      <Counter initialCount={0} />
+      <hr />
+      <h3>Class Components: Lifecycle</h3>
+      <ImageLoader url="https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg" />
     </div>
   );
 }
