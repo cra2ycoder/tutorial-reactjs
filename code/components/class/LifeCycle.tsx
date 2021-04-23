@@ -41,9 +41,14 @@ export class ImageLoader extends React.Component<IImageLoaderProps> {
    * - will be triggered when the state has updated
    */
   componentDidUpdate() {
-    // each time when the stage get updated
     console.log(this.state);
   }
+
+  /**
+   * @description
+   * - will be triggered when component going to removed from the page
+   */
+  componentWillUnmount() {}
 
   /**
    * @description
