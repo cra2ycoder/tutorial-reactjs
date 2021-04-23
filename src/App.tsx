@@ -4,7 +4,10 @@ import {
   Car,
   TypescriptCar,
   Counter,
-  ImageLoader
+  ImageLoader,
+  LogicalShape,
+  ConditionalShape,
+  ElementVariables
 } from "../code/components/class";
 
 import "./styles.css";
@@ -37,6 +40,17 @@ export default function App() {
       <hr />
       <h3>Class Components: Lifecycle</h3>
       <ImageLoader url="https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg" />
+      <hr />
+      <h3>Conditional Rendering</h3>
+      <p>Logical Operator ( && )</p>
+      <LogicalShape shapeType="square" />
+      <LogicalShape shapeType="circle" />
+      <p>Conditinal Operation ( ? : )</p>
+      <ConditionalShape shapeType="square" />
+      <ConditionalShape shapeType="circle" />
+      <p>Using Variables for Elements/Components</p>
+      <ElementVariables shapeType="square" />
+      <ElementVariables shapeType="circle" />
     </div>
   );
 }
