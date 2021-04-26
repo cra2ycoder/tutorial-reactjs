@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
  */
 export class Car extends React.Component {
   render() {
-    return <div>{JSON.stringify(this.props)}</div>;
+    return <code>{JSON.stringify(this.props)}</code>;
   }
 }
 
@@ -35,6 +35,6 @@ interface ICarProps {
 
 export class TypescriptCar extends React.Component<ICarProps> {
   render() {
-    return <div>{JSON.stringify(this.props)}</div>;
+    return <code>{JSON.stringify(this.props)}</code>;
   }
 }

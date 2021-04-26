@@ -4,12 +4,16 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/">
-          <Page1 />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <div className="App">
+      <h1>React JS</h1>
+      <hr />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/">
+            <Page1 />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
