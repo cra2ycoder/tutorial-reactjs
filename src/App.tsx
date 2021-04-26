@@ -1,6 +1,8 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Page1 from "../pages/page1";
 import Error from "../pages/error";
+import CodeSplit from "../pages/codesplit";
+
 import "./styles.css";
 
 export default function App() {
@@ -15,6 +17,9 @@ export default function App() {
           </Route>
           <Route path="/error">
             <Error />
+          </Route>
+          <Route path="/codesplit">
+            <CodeSplit />
           </Route>
         </Switch>
       </BrowserRouter>
