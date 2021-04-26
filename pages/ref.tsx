@@ -1,4 +1,4 @@
-import ForwardRefExample from "../code/ref/ForwardRef";
+import ForwardRefExample from "../code/ForwardRef";
 
 export default function Ref() {
   return <ForwardRefExample />;

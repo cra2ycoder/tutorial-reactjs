@@ -3,6 +3,7 @@ import Page1 from "../pages/page1";
 import Error from "../pages/error";
 import CodeSplit from "../pages/codesplit";
 import ForwardRefExample from "../pages/ref";
+import Hoc from "../pages/hoc";
 
 import "./styles.css";
 
@@ -24,6 +25,9 @@ export default function App() {
           </Route>
           <Route path="/ref">
             <ForwardRefExample />
+          </Route>
+          <Route path="/hoc">
+            <Hoc />
           </Route>
         </Switch>
       </BrowserRouter>
