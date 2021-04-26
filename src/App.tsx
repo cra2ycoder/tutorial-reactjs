@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Page1 from "../pages/page1";
+import Error from "../pages/error";
 import "./styles.css";
 
 export default function App() {
@@ -9,8 +10,11 @@ export default function App() {
       <hr />
       <BrowserRouter>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Page1 />
+          </Route>
+          <Route path="/error">
+            <Error />
           </Route>
         </Switch>
       </BrowserRouter>

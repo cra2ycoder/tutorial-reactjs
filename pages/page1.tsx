@@ -86,6 +86,7 @@ export default class Page1 extends React.Component {
         <hr />
         <h3>Lists & Keys</h3>
         <TodoList />
+        <hr />
       </div>
     );
   }
