@@ -7,7 +7,8 @@ import {
   ImageLoader,
   LogicalShape,
   ConditionalShape,
-  ElementVariables
+  ElementVariables,
+  FlowerGallery
 } from "../code/components/class";
 
 import "./styles.css";
@@ -51,6 +52,8 @@ export default function App() {
       <p>Using Variables for Elements/Components</p>
       <ElementVariables shapeType="square" />
       <ElementVariables shapeType="circle" />
+      <p>Context & Provider</p>
+      <FlowerGallery />
     </div>
   );
 }
