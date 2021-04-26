@@ -12,7 +12,7 @@ export const FlowerContext = createContext({});
  */
 export class FlowerImage extends React.Component {
   render() {
-    console.log(this.context);
+    // console.log(this.context);
     return (
       <img
         src={this.context.flowerSrc || this.context.flowerPlaceHolder}

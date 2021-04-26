@@ -8,7 +8,8 @@ import {
   LogicalShape,
   ConditionalShape,
   ElementVariables,
-  FlowerGallery
+  FlowerGallery,
+  TodoList
 } from "../code/components/class";
 
 import "./styles.css";
@@ -54,6 +55,8 @@ export default function App() {
       <ElementVariables shapeType="circle" />
       <p>Context & Provider</p>
       <FlowerGallery />
+      <p>Lists & Keys</p>
+      <TodoList />
     </div>
   );
 }
