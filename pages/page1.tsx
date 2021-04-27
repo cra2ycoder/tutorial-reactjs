@@ -10,7 +10,8 @@ import {
   ConditionalShape,
   ElementVariables,
   FlowerGallery,
-  TodoList
+  TodoList,
+  RefExample
 } from "../code/components/class";
 
 export default class Page1 extends React.Component {
@@ -86,6 +87,9 @@ export default class Page1 extends React.Component {
         <hr />
         <h3>Lists & Keys</h3>
         <TodoList />
+        <hr />
+        <h3>Refs</h3>
+        <RefExample />
         <hr />
       </div>
     );
