@@ -47,7 +47,7 @@ export function ImageLoader(props: IImageLoaderProps) {
     return () => {
       // this function will be called when unmounting
     };
-  }, []);
+  });
 
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>

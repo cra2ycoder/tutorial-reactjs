@@ -49,3 +49,39 @@ export function CDULifeCycle() {
     </>
   );
 }
+
+function TestComponent() {
+  const [state, setState] = useState<string>("");
+
+  useEffect(() => {
+    return () => {
+      console.log({ state });
+      setState("TestComponent unmount!");
+    };
+  });
+
+  useEffect(() => {
+    setState("TestComponent mounted!");
+  }, []);
+
+  return <div>{state}</div>;
+}
+
+/**
+ * @description
+ * componentWillUnMount() with Hooks
+ */
+
+export function CWUMLifeCycle() {
+  const [shouldRemove, setShouldRemove] = useState<boolean>(false);
+  const toggleComponent = () => {
+    setShouldRemove(!shouldRemove);
+  };
+
+  return (
+    <>
+      {shouldRemove === false && <TestComponent />}
+      <button onClick={toggleComponent}>toggle component</button>
+    </>
+  );
+}

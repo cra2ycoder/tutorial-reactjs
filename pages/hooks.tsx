@@ -3,7 +3,8 @@ import {
   GroupState,
   DefaultState,
   CDMLifeCycle,
-  CDULifeCycle
+  CDULifeCycle,
+  CWUMLifeCycle
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -23,6 +24,9 @@ export default function Hooks() {
       <hr />
       <h3>lifecycle: componentDidUpdate()</h3>
       <CDULifeCycle />
+      <hr />
+      <h3>lifecycle: componentWillUnMount()</h3>
+      <CWUMLifeCycle />
     </>
   );
 }
