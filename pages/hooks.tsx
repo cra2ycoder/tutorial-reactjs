@@ -1,4 +1,10 @@
-import { ReadAndWriteState, GroupState, DefaultState } from "../code/hooks";
+import {
+  ReadAndWriteState,
+  GroupState,
+  DefaultState,
+  CDMLifeCycle,
+  CDULifeCycle
+} from "../code/hooks";
 
 export default function Hooks() {
   return (
@@ -11,6 +17,12 @@ export default function Hooks() {
       <hr />
       <h3>state: default values</h3>
       <DefaultState />
+      <hr />
+      <h3>lifecycle: componentDidMount()</h3>
+      <CDMLifeCycle />
+      <hr />
+      <h3>lifecycle: componentDidUpdate()</h3>
+      <CDULifeCycle />
     </>
   );
 }
