@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Page1 from "../pages/page1";
+import Page2 from "../pages/page2";
 import Error from "../pages/error";
 import CodeSplit from "../pages/codesplit";
 import ForwardRefExample from "../pages/ref";
@@ -19,6 +20,9 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Page1 />
+          </Route>
+          <Route exact path="/page2">
+            <Page2 />
           </Route>
           <Route path="/error">
             <Error />
