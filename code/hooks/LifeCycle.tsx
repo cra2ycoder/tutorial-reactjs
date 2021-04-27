@@ -71,7 +71,6 @@ function TestComponent() {
  * @description
  * componentWillUnMount() with Hooks
  */
-
 export function CWUMLifeCycle() {
   const [shouldRemove, setShouldRemove] = useState<boolean>(false);
   const toggleComponent = () => {
@@ -82,6 +81,50 @@ export function CWUMLifeCycle() {
     <>
       {shouldRemove === false && <TestComponent />}
       <button onClick={toggleComponent}>toggle component</button>
+    </>
+  );
+}
+
+/**
+ * @description
+ * lifecycle trick for dynamic props
+ */
+
+interface IDynamicPropsUpdate {
+  count?: number;
+}
+
+export function DynamicPropsWithNoUpdate(props: IDynamicPropsUpdate) {
+  const [count, setCount] = useState<number>(props.count);
+  return <div>[child] Dynamic Props with no update: {count}</div>;
+}
+
+export function DynamicPropsWithUpdate(props: IDynamicPropsUpdate) {
+  const [count, setCount] = useState<number>(props.count);
+
+  /**
+   * @description
+   * this lifecycle helps to update the internal state props
+   */
+  useEffect(() => {
+    if (props.count !== count) {
+      setCount(props.count);
+    }
+  }, [props.count]);
+
+  return <div>[child] Dynamic props with update: {count}</div>;
+}
+
+export function DynamicPropsLifeCycle() {
+  const [length, setLength] = useState<number>(0);
+
+  return (
+    <>
+      <DynamicPropsWithNoUpdate count={length} />
+      <DynamicPropsWithUpdate count={length} />
+      <div>[parent]: {length}</div>
+      <button onClick={() => setLength(length + 1)}>+</button>
+      <button onClick={() => setLength(length - 1)}>-</button>
     </>
   );
 }

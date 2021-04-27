@@ -4,7 +4,8 @@ import {
   DefaultState,
   CDMLifeCycle,
   CDULifeCycle,
-  CWUMLifeCycle
+  CWUMLifeCycle,
+  DynamicPropsLifeCycle
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -27,6 +28,9 @@ export default function Hooks() {
       <hr />
       <h3>lifecycle: componentWillUnMount()</h3>
       <CWUMLifeCycle />
+      <hr />
+      <h3>lifecycle: Dynamic props updates()</h3>
+      <DynamicPropsLifeCycle />
     </>
   );
 }
