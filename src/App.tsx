@@ -6,6 +6,7 @@ import ForwardRefExample from "../pages/ref";
 import Hoc from "../pages/hoc";
 import Portals from "../pages/portals";
 import Profiler from "../pages/profiler";
+import RenderProps from "../pages/renderprops";
 import "./styles.css";
 
 export default function App() {
@@ -35,6 +36,9 @@ export default function App() {
           </Route>
           <Route path="/profiler">
             <Profiler />
+          </Route>
+          <Route path="/renderprops">
+            <RenderProps />
           </Route>
         </Switch>
       </BrowserRouter>
