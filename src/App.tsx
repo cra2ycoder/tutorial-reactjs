@@ -7,6 +7,7 @@ import Hoc from "../pages/hoc";
 import Portals from "../pages/portals";
 import Profiler from "../pages/profiler";
 import RenderProps from "../pages/renderprops";
+import DOMElements from "../pages/dom";
 import "./styles.css";
 
 export default function App() {
@@ -39,6 +40,9 @@ export default function App() {
           </Route>
           <Route path="/renderprops">
             <RenderProps />
+          </Route>
+          <Route path="/dom">
+            <DOMElements />
           </Route>
         </Switch>
       </BrowserRouter>
