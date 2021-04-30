@@ -33,6 +33,10 @@ function Animal(props: IAnimalProps) {
  * @description
  * components memoized for optimizing
  * - this will control the re-rendering
+ * - only compares props (prevProps vs nextProps)
+ * - only does shallow comparsion
+ * - if the child component has useState, useReduer, useContext then component will re-render
+ *
  */
 const MemoizedTitle = memo(Title);
 const MemoizedPicture = memo(Picture);
