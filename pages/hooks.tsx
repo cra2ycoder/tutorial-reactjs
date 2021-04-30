@@ -5,7 +5,8 @@ import {
   CDMLifeCycle,
   CDULifeCycle,
   CWUMLifeCycle,
-  DynamicPropsLifeCycle
+  DynamicPropsLifeCycle,
+  CustomHook
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -31,6 +32,9 @@ export default function Hooks() {
       <hr />
       <h3>lifecycle: Dynamic props updates()</h3>
       <DynamicPropsLifeCycle />
+      <hr />
+      <h3>CustomHook</h3>
+      <CustomHook />
     </>
   );
 }
