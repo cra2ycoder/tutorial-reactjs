@@ -6,13 +6,14 @@ import {
   CDULifeCycle,
   CWUMLifeCycle,
   DynamicPropsLifeCycle,
-  CustomHook
+  CustomHook,
+  MemoExample
 } from "../code/hooks";
 
 export default function Hooks() {
   return (
     <>
-      <h3>state: read & write</h3>
+      {/* <h3>state: read & write</h3>
       <ReadAndWriteState />
       <hr />
       <h3>state: group</h3>
@@ -35,6 +36,9 @@ export default function Hooks() {
       <hr />
       <h3>CustomHook</h3>
       <CustomHook />
+      <hr /> */}
+      <h3>Memo Example</h3>
+      <MemoExample />
     </>
   );
 }
