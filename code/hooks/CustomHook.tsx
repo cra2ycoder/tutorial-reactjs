@@ -40,17 +40,27 @@ export function useAPIHook(props: IAPIHookPros): IAPIHookResponseProps {
 }
 
 export function CustomHook() {
-  const {
-    isLoading = true,
-    fetchedResponse = {}
-  }: IAPIHookResponseProps = useAPIHook({
+  const todoAPI: IAPIHookResponseProps = useAPIHook({
     url: "https://jsonplaceholder.typicode.com/todos/1"
+  });
+
+  const userAPI: IAPIHookResponseProps = useAPIHook({
+    url: "https://jsonplaceholder.typicode.com/users/1"
   });
 
   return (
     <>
-      {isLoading === true && <div>Loading...</div>}
-      {isLoading === false && <div>{JSON.stringify(fetchedResponse)}</div>}
+      {(todoAPI.isLoading === true || userAPI.isLoading === true) && (
+        <div>Loading...</div>
+      )}
+      <hr />
+      {todoAPI.isLoading === false && (
+        <div>{JSON.stringify(todoAPI.fetchedResponse)}</div>
+      )}
+      <hr />
+      {userAPI.isLoading === false && (
+        <div>{JSON.stringify(userAPI.fetchedResponse)}</div>
+      )}
     </>
   );
 }
