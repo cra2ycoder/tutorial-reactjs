@@ -7,7 +7,8 @@ import {
   CWUMLifeCycle,
   DynamicPropsLifeCycle,
   CustomHook,
-  MemoExample
+  MemoExample,
+  Parent as ContextParentExample
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -39,6 +40,9 @@ export default function Hooks() {
       <hr />
       <h3>Memo Example</h3>
       <MemoExample />
+      <hr />
+      <h3>Context Parent Example</h3>
+      <ContextParentExample />
     </>
   );
 }

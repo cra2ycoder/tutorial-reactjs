@@ -4,7 +4,7 @@ interface IAPIHookPros {
   url: string;
 }
 
-interface IAPIHookResponseProps {
+export interface IAPIHookResponseProps {
   isLoading: boolean;
   fetchedResponse: any;
 }
