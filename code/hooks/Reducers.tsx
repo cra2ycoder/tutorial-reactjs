@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 
 // export const reducerDefaultProps = () => {
 //   return {
@@ -22,6 +22,9 @@ export enum COUNTER_ACTIONS {
  * we must return updated state else render will not works
  * @param state => which shared by reducer by automatically
  * @param actions => which will be shared when reducer dispatch
+ *
+ * best choice - when we requird to handle the complex state
+ * - looks like Redux concept but its much straight forward
  */
 export const reducerStateHandler = (state: any, actions: any) => {
   console.log({ state, actions });
