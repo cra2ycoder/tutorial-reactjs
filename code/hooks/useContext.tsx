@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useAPIHook, IAPIHookResponseProps } from "./CustomHook";
+import { useAPIHook, IAPIHookResponseProps } from "./customHook";
 
 export const ComponentContext = React.createContext({} as any);
 

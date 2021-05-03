@@ -9,7 +9,8 @@ import {
   CustomHook,
   MemoExample,
   Parent as ContextParentExample,
-  ReducerComponent
+  ReducerComponent,
+  UseMemoExample
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -47,6 +48,9 @@ export default function Hooks() {
       <hr />
       <h3>Reducers</h3>
       <ReducerComponent />
+      <hr />
+      <h3>Use Memo</h3>
+      <UseMemoExample />
     </>
   );
 }
