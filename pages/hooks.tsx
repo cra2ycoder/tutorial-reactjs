@@ -8,7 +8,8 @@ import {
   DynamicPropsLifeCycle,
   CustomHook,
   MemoExample,
-  Parent as ContextParentExample
+  Parent as ContextParentExample,
+  ReducerComponent
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -43,6 +44,9 @@ export default function Hooks() {
       <hr />
       <h3>Context Parent Example</h3>
       <ContextParentExample />
+      <hr />
+      <h3>Reducers</h3>
+      <ReducerComponent />
     </>
   );
 }
