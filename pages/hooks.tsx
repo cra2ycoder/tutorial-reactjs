@@ -11,7 +11,8 @@ import {
   Parent as ContextParentExample,
   ReducerComponent,
   UseMemoExample,
-  SearchBox
+  SearchBox,
+  UseCallBackExample
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -54,6 +55,9 @@ export default function Hooks() {
       <UseMemoExample />
       <hr />
       <SearchBox />
+      <hr />
+      <h3>Use Callback</h3>
+      <UseCallBackExample />
     </>
   );
 }

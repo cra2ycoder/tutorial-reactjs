@@ -5,3 +5,4 @@ export * from "./memo";
 export * from "./useContext";
 export * from "./useReducer";
 export * from "./useMemo";
+export * from "./useCallback";
