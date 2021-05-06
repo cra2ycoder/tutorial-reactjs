@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { createRef, useMemo, useState } from "react";
 
 export function useAPIWithMemo(props: any) {
   const [url, setURL] = useState(props.url);
@@ -42,6 +42,59 @@ export function UseMemoExample() {
       {isLoading === false && <div>{JSON.stringify(fetchedResponse)}</div>}
       <button onClick={() => setToggle(!toggle)}>{toggle.toString()}</button>
       <button onClick={changeURL}>change url</button>
+    </div>
+  );
+}
+
+/**
+ * @note
+ * optimized searching technique
+ */
+export function SuggestionList({ list }: any) {
+  return (
+    <ul>
+      {list.map((x, index: number) => (
+        <li key={`item-${index}`}>{x}</li>
+      ))}
+    </ul>
+  );
+}
+
+const nameList = [
+  "Mufasa",
+  "Sarabi",
+  "Simba",
+  "Nala",
+  "Kiara",
+  "Kovu",
+  "Timon",
+  "Pumbaa",
+  "Rafiki",
+  "Shenzi"
+];
+
+export function SearchBox() {
+  const [userInput, setUserInput] = useState("");
+  const inputRef = createRef();
+
+  const filteredList = useMemo(() => {
+    console.log("calling....");
+    return nameList.filter((x) => x.includes(userInput));
+  }, [userInput]);
+
+  const doSearch = () => {
+    setUserInput(inputRef.current.value);
+  };
+
+  return (
+    <div>
+      <input
+        ref={inputRef}
+        type="text"
+        onChange={doSearch}
+        placeholder="type here to search..."
+      />
+      <SuggestionList list={filteredList} />
     </div>
   );
 }

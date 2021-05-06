@@ -10,7 +10,8 @@ import {
   MemoExample,
   Parent as ContextParentExample,
   ReducerComponent,
-  UseMemoExample
+  UseMemoExample,
+  SearchBox
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -51,6 +52,8 @@ export default function Hooks() {
       <hr />
       <h3>Use Memo</h3>
       <UseMemoExample />
+      <hr />
+      <SearchBox />
     </>
   );
 }
