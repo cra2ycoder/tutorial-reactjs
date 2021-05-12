@@ -12,7 +12,8 @@ import {
   ReducerComponent,
   UseMemoExample,
   SearchBox,
-  UseCallBackExample
+  UseCallBackExample,
+  RefExample
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -58,6 +59,9 @@ export default function Hooks() {
       <hr />
       <h3>Use Callback</h3>
       <UseCallBackExample />
+      <hr />
+      <h3>Use Ref</h3>
+      <RefExample />
     </>
   );
 }
