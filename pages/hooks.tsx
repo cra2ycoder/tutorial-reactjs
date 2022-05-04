@@ -13,7 +13,8 @@ import {
   UseMemoExample,
   SearchBox,
   UseCallBackExample,
-  RefExample
+  RefExample,
+  UseTransitionHookExample
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -62,6 +63,9 @@ export default function Hooks() {
       <hr />
       <h3>Use Ref</h3>
       <RefExample />
+      <hr />
+      <h3>UseTransitionHookExample</h3>
+      <UseTransitionHookExample />
     </>
   );
 }
