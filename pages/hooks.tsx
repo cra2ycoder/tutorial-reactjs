@@ -14,7 +14,8 @@ import {
   SearchBox,
   UseCallBackExample,
   RefExample,
-  UseTransitionHookExample
+  UseTransitionHookExample,
+  UseDeferredValueExample
 } from "../code/hooks";
 
 export default function Hooks() {
@@ -66,6 +67,9 @@ export default function Hooks() {
       <hr />
       <h3>UseTransitionHookExample</h3>
       <UseTransitionHookExample />
+      <hr />
+      <h3>UseDeferredValueExample</h3>
+      <UseDeferredValueExample />
     </>
   );
 }
